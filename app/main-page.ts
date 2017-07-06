@@ -14,5 +14,6 @@ export function creatingView(args: CreateViewEventData) {
 export function loaded(args) {
     console.log("Loaded");
     let color = new Color("#FF0000");
-    args.object.nativeView.getThumbDrawable().setColorFilter(color.android, android.graphics.PorterDuff.Mode.SRC_IN);
+    // args.object.nativeView.getThumbDrawable().setColorFilter(color.android, android.graphics.PorterDuff.Mode.SRC_IN);
+    args.object.nativeView.getThumbDrawable(); // still produces an error
 }
